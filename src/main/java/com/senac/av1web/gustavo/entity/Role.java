@@ -3,7 +3,7 @@ package com.senac.av1web.gustavo.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "roles")
+@Table(name = "roles") // Nome da tabela conforme seu diagrama
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,15 +14,17 @@ public class Role {
     @Column(name = "role_nome")
     private RoleName nome;
 
-    // Construtores, getters e setters
+    // Construtores
     public Role() {}
 
     public Role(RoleName nome) {
         this.nome = nome;
     }
 
+    // Getters e Setters
     public Integer getId() { return id; }
     public void setId(Integer id) { this.id = id; }
+
     public RoleName getNome() { return nome; }
     public void setNome(RoleName nome) { this.nome = nome; }
 }

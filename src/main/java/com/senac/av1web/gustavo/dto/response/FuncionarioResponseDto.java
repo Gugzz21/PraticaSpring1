@@ -1,5 +1,6 @@
 package com.senac.av1web.gustavo.dto.response;
 
+import com.senac.av1web.gustavo.dto.FolhaPagamentoDto;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -12,9 +13,6 @@ public class FuncionarioResponseDto {
     private Integer status;
     private List<String> roles;
     private List<FolhaPagamentoDto> folhasPagamento;
-
-    // Construtores, getters e setters
-    public FuncionarioResponseDto() {}
 
     // Getters e Setters
     public Integer getId() { return id; }

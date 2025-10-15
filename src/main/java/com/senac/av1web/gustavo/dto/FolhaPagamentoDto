@@ -1,7 +1,0 @@
-package com.senac.av1web.gustavo.dto;
-
-public record FolhaPagamentoDto(
-    Integer mes,
-    Integer ano,
-    Integer salario,
-    Integer funcionarioId){}
