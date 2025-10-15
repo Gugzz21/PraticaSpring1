@@ -4,5 +4,4 @@ public enum RoleName {
     GERENTE,
 
     COLABORADOR
-
 }
