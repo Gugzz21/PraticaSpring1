@@ -13,7 +13,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
     private FuncionarioRepository funcionarioRepository;
-
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Funcionario funcionario = funcionarioRepository.findByMatricula(username).orElseThrow(() -> new RuntimeException("Usuário não encontrado."));
