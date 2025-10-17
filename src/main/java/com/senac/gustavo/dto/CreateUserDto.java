@@ -1,11 +1,12 @@
 package com.senac.gustavo.dto;
 
-import com.example.demo.entity.RoleName;
+
+import com.senac.gustavo.entity.RoleName;
 
 public record CreateUserDto(
 
-        String email,
-        String password,
+        String matricula,
+        String chaveAcesso,
         RoleName role
 
 ) {

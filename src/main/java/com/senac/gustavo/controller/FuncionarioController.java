@@ -28,7 +28,6 @@ public class FuncionarioController {
 
     }
 
-
     @GetMapping("/listar/{id}")
     public ResponseEntity<Funcionario> listarFuncionarios(@PathVariable("id") Integer id){
 

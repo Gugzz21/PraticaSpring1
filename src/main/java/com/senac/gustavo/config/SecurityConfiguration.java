@@ -22,9 +22,8 @@ public class SecurityConfiguration {
     private UserAuthenticationFilter userAuthenticationFilter;
 
     public static final String [] ENDPOINTS_WITH_AUTHENTICATION_NOT_REQUIRED = {
-            "/users/login", // Url que usaremos para fazer login
-            "/users", // Url que usaremos para criar um usuário
-            "/h2-console",
+            "/api/funcionario/**",
+
             // 🔓 Swagger/OpenAPI UI
             "/v3/api-docs/**",
             "/swagger-ui/**",
@@ -54,8 +53,8 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(ENDPOINTS_WITH_AUTHENTICATION_NOT_REQUIRED).permitAll()
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll() //adicionado para funcionamento do swagger
-                        .requestMatchers(ENDPOINTS_ADMIN).hasRole("ROLE_GERENTE")
-                        .requestMatchers(ENDPOINTS_CUSTOMER).hasRole("ROLE_COLABORADOR")
+                        .requestMatchers(ENDPOINTS_ADMIN).hasRole("GERENTE")
+                        .requestMatchers(ENDPOINTS_CUSTOMER).hasRole("COLABORADOR")
                         .requestMatchers(ENDPOINTS_WITH_AUTHENTICATION_REQUIRED).authenticated()
                         .anyRequest().denyAll()
                 )
